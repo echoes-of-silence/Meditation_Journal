@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-lotus-50: #fdf8f6;
+  --color-lotus-100: #faeee9;
+  --color-lotus-200: #f3d9cf;
+  --color-lotus-300: #e8bcab;
+  --color-lotus-400: #d99880;
+  --color-lotus-500: #c87a5c;
+
+  --color-dawn-50: #f6f8f6;
+  --color-dawn-100: #e9efe9;
+  --color-dawn-200: #cfdfd1;
+  --color-dawn-300: #aecab1;
+  --color-dawn-400: #87ab8d;
+  --color-dawn-500: #668c6e;
+
+  --color-sky-50: #f3f8fb;
+  --color-sky-100: #e4eef5;
+  --color-sky-200: #c4dde9;
+  --color-sky-300: #9bc4d9;
+  --color-sky-400: #6fa6c4;
+  --color-sky-500: #4c87a8;
+
+  --color-gold-50: #fdfaf3;
+  --color-gold-100: #f8efd6;
+  --color-gold-200: #f0dba3;
+  --color-gold-300: #e6c170;
+  --color-gold-400: #d6a648;
+  --color-gold-500: #bd8b34;
+
+  --color-ink-50: #f7f6f4;
+  --color-ink-100: #ece9e4;
+  --color-ink-200: #d6d0c6;
+  --color-ink-300: #b3a999;
+  --color-ink-400: #837a6c;
+  --color-ink-500: #5c5448;
+  --color-ink-600: #443f36;
+  --color-ink-700: #322e28;
+  --color-ink-800: #221f1a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #fbf7f2 0%, #f4efe7 40%, #eef3ec 100%);
+  color: var(--color-ink-700);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3.2s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: breathe 6s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dawn-300);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
